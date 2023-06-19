@@ -1,0 +1,59 @@
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir learn
+3) Зайти в папку - cd learn
+4) Создать 3 папки - mkdir 1d 2d 3d
+5) Зайти в любоую папку - cd 1d
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 4.json 5.json
+7) Создать 3 папки - mkdir 1fold 2fold 3fold
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - cat > 1.txt 
+10) + написать туда что-нибудь, любой текст - first line
+11) + сохранить и выйти - ctrl c
+12) Выйти из папки на уровень выше - cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку - mv 1d/1.txt 1d/2.txt 2d/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку - cp 1d/3.txt 1d/4.json 3d/
+15) Найти файл по имени - find -type f -name 1.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+17) вывести несколько первых строк из текстового файла - head -2 1.txt
+18) вывести несколько последних строк из текстового файла - tail -2 1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less 1.txt
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+curl http://162.55.220.72:5006/terminal-hw-request
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0    597      0 --:--:-- --:--:-- --:--:--   598{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+curl http://162.55.220.72:5006/get_method?name=Karina&age=31&
+
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+cd terminal
+mkdir 1d 2d 3d
+cd 1d
+touch 1.txt 2.txt 3.txt 4.json 5.json
+mkdir 1fold 2fold 3fold
+ls -la
+mv 1.txt 2.txt ../2d
+chmod +x firstscript
+./firstscript
+
+
+

@@ -38,7 +38,7 @@ curl http://162.55.220.72:5006/terminal-hw-request
     ]
   }
 }
-curl http://162.55.220.72:5006/get_method?name=Karina&age=31&
+curl http://162.55.220.72:5006/get_method?"name=Karina&age=31"
 
 
 
